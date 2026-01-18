@@ -1,6 +1,117 @@
 .header {}
 
-.hero {}
+/* Global Reset for Margin (Optional but recommended for full width) */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    width: 100%;
+    /* PC height default */
+    height: 80vh;
+    /* Gradient Background - approximating the screenshot */
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background: linear-gradient(to bottom right, #5EE7DF 0%, #3080ED 100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    /* Space between logo and text */
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.hero-logo img {
+    display: block;
+    width: 300px;
+    /* Adjust size to be prominent */
+    height: auto;
+    /* Blend mode to hide white background of the JPG logo */
+    mix-blend-mode: multiply;
+    /* Optional: Filter to make text white if the logo was black? 
+       No, the logo provided "Lyta" is dark. 
+       The screenshot shows "FA" in white. 
+       If the logo is dark and background is blue, multiply makes it darker. 
+       Wait. "Lyta" logo is dark slate text on white bg (Image 3). 
+       Blue bg + Multiply = Dark Text on Blue. 
+       Screenshot 1 shows WHITE text "FA" on Blue.
+       
+       If I use multiply, the white part of logo becomes transparent (good), but the dark text "Lyta" remains dark (bad vs screenshot feeling?).
+       Measurements: User said "appearance almost exactly mimic photo". 
+       The photo has white logo. 
+       The provided logo is dark. 
+       I should probably invert the logo or make it white if possible with css filters, OR just use it as is if "logo position" is what matters.
+       User says "use image 3 as logo... file name will change later... temporary setting".
+       I'll stick to multiply for now to handle the box, but maybe brightness(0) invert(1) to make it white?
+       Let's try to make it white to match the aesthetic of "FA" in visual.
+    */
+    filter: brightness(0) invert(1);
+    /* Turns black to white */
+    mix-blend-mode: screen;
+    /* Screen blends white onto blue? No. */
+    /* 
+       Strategy:
+       1. The logo is Dark Text on White BG.
+       2. We want White Text on Transparent (Blue) BG.
+       3. Simple invert: White Text on Black BG.
+       4. Screen blend mode: Black becomes transparent, White stays white.
+    */
+}
+
+/* Overriding mix-blend-mode for the filter strategy */
+.hero-logo img {
+    mix-blend-mode: screen;
+    filter: invert(1) grayscale(1);
+    /* 
+       Original: Dark Grey Text / White BG 
+       Invert: Light Grey Text / Black BG
+       Screen: Black BG becomes transparent. Light Grey Text remains.
+    */
+}
+
+
+.hero-text {
+    color: #fff;
+    font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.1em;
+}
+
+/* Mobile Logic */
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 40vh;
+        /* Request: Mobile 40% height */
+    }
+
+    .hero-container {
+        flex-direction: column;
+        /* Stack logo and text if space is tight */
+        gap: 15px;
+        text-align: center;
+    }
+
+    .hero-logo img {
+        width: 180px;
+        /* Smaller logo on mobile */
+    }
+
+    .hero-text {
+        font-size: 1.2rem;
+    }
+}
 
 .service {}
 
