@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="index.css">
     <!-- JS -->
     <script src="js/index.js" defer></script>
+    <script src="mizuki.js" defer></script>
 </head>
 
 <body>
@@ -20,8 +21,34 @@
     <!-- ======================
        Header
   ====================== -->
-    <header id="header">
-        <!-- ナビゲーションなど -->
+    <header class="header">
+        <div class="header-inner">
+            <!-- ロゴ -->
+            <div class="header-logo">
+                <a href="#">
+                    <img src="assets/logo.png" alt="FreeAgent">
+                </a>
+            </div>
+
+            <!-- ナビゲーション -->
+            <nav class="header-nav">
+                <ul class="nav-list">
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#service">SERVICE</a></li>
+                    <li><a href="#company">COMPANY</a></li>
+                    <li><a href="#recruit">RECRUIT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        <!-- ハンバーガーボタン（スマホ用） -->
+        <button class="hamburger" aria-label="メニュー">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
     </header>
 
 
@@ -35,11 +62,10 @@
                 <img src="assets/logo.jpg" alt="Lyta Logo">
             </div>
             <p class="hero-text">
-                少し先の未来を、<br>仲間と共に作る。ABC
+                少し先の未来を、<br>仲間と共に作る。
             </p>
         </div>
     </section>
-    1
 
     <!-- ======================
        About / Service

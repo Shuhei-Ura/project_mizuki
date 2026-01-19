@@ -1,4 +1,91 @@
-.header {}
+.header {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+}
+
+/* ===== 基本（PC） ===== */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* ===== スマホ ===== */
+@media screen and (max-width: 768px) {
+  .header-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .header-nav.is-open {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+    text-align: center;
+  }
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 24px;
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+}
+
+.header-logo {
+    justify-self: start;
+}
+
+.header-logo img {
+    display: block;
+    width: 120px;
+    height: auto;
+    justify-content: center;
+}
+
+.header-nav {
+    justify-self: center;
+}
+
+.nav-list {
+    /*HTMLの<li>部のスタイルを縦から横表示に変える機能*/
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    /* 各メニューの間隔 */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.hamburger span {
+    /*spanの意味後で調べる*/
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #1e4fd7;
+    margin: 6px 0;
+}
+
 
 /* Global Reset for Margin (Optional but recommended for full width) */
 body {
