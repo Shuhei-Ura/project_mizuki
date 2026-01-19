@@ -2,42 +2,48 @@
     width: 100%;
     background-color: #ffffff;
     border-bottom: 1px solid #eaeaea;
+    position: relative;
 }
 
 /* ===== 基本（PC） ===== */
 .hamburger {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
 }
 
 /* ===== スマホ ===== */
 @media screen and (max-width: 768px) {
-  .header-nav {
-    display: none;
-  }
+    .header-nav {
+        display: none;
+    }
 
-  .hamburger {
-    display: block;
-  }
+    .hamburger {
+        display: block;
+        position: absolute;/* ★ 追加 */
+        top: 50%;/* ★ */
+        right: 24px;/* ★ */
+        transform: translateY(-50%);/* ★ 縦中央揃え */
+        z-index: 1000;
+    }
 
-  .header-nav.is-open {
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #ffffff;
-  }
+    .header-nav.is-open {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+    }
 
-  .nav-list {
-    flex-direction: column;
-    gap: 24px;
-    padding: 24px;
-    text-align: center;
-  }
+    .nav-list {
+        flex-direction: column;
+        gap: 24px;
+        padding: 24px;
+        text-align: center;
+    }
 }
 
 .header-inner {
@@ -84,7 +90,21 @@
     height: 2px;
     background-color: #1e4fd7;
     margin: 6px 0;
+    transition: all 0.3s ease; 
 }
+
+.hamburger.is-open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.is-open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
 
 
 /* Global Reset for Margin (Optional but recommended for full width) */
