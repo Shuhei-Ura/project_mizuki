@@ -14,38 +14,6 @@
     padding: 0;
 }
 
-/* ===== スマホ ===== */
-@media screen and (max-width: 768px) {
-    .header-nav {
-        display: none;
-    }
-
-    .hamburger {
-        display: block;
-        position: absolute;/* ★ 追加 */
-        top: 50%;/* ★ */
-        right: 24px;/* ★ */
-        transform: translateY(-50%);/* ★ 縦中央揃え */
-        z-index: 1000;
-    }
-
-    .header-nav.is-open {
-        display: block;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #ffffff;
-    }
-
-    .nav-list {
-        flex-direction: column;
-        gap: 24px;
-        padding: 24px;
-        text-align: center;
-    }
-}
-
 .header-inner {
     max-width: 1200px;
     margin: 0 auto;
@@ -105,7 +73,37 @@
   transform: translateY(-8px) rotate(-45deg);
 }
 
+/* ===== スマホ ===== */
+@media screen and (max-width: 768px) {
+    .header-nav {
+        display: none;
+    }
 
+    .hamburger {
+        display: block;
+        position: absolute;/* ★ 追加 */
+        top: 50%;/* ★ */
+        right: 24px;/* ★ */
+        transform: translateY(-50%);/* ★ 縦中央揃え */
+        z-index: 1000;
+    }
+
+    .header-nav.is-open {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 24px;
+        padding: 24px;
+        text-align: center;
+    }
+}
 
 /* Global Reset for Margin (Optional but recommended for full width) */
 body {
@@ -220,7 +218,184 @@ body {
     }
 }
 
-.service {}
+/* =========================
+   About Section
+========================= */
+/*
+.about {
+  padding: 120px 0;
+  background-color: #ffffff;
+}
+
+.about-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.about-title {
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: #1e4fd7;
+  margin-bottom: 16px;
+  font-family: "Times New Roman", serif;
+}
+
+.about-line {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: 1px;
+  background-color: #1e4fd7;
+  margin-bottom: 48px;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 2;
+  color: #111;
+  margin-bottom: 24px;
+}
+
+/* =========================
+   Mobile
+========================= 
+
+@media screen and (max-width: 768px) {
+  .about {
+    padding: 80px 0;
+  }
+
+  .about-title {
+    font-size: 36px;
+  }
+
+  .about-line {
+    margin-bottom: 32px;
+  }
+
+  .about-text p {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+}
+*/
+
+/* =========================
+   SERVICE
+========================= */
+
+.service {
+  background-color: #177cf2;
+  padding: 120px 0;
+}
+
+.service-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* SERVICE タイトル */
+.service-title {
+  font-size: 48px;
+  font-family: "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+/* タイトル直下の細い線（重要） */
+.service-line {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 48px;
+}
+
+/* サブタイトル */
+.service-subtitle {
+  font-size: 22px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+/* =========================
+   販売派遣ブロック
+========================= */
+
+.service-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+/* 画像 */
+.service-image {
+  flex: 0 0 320px;
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* テキスト */
+.service-content {
+  color: #ffffff;
+}
+
+.service-content p {
+  font-size: 16px;
+  line-height: 2;
+  margin-bottom: 16px;
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media screen and (max-width: 768px) {
+  .service {
+    padding: 80px 0;
+  }
+
+  .service-title {
+    font-size: 36px;
+  }
+
+  .service-line {
+    margin-bottom: 32px;
+  }
+
+  .service-subtitle {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .service-item {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .service-image {
+    flex: none;
+    width: 100%;
+  }
+
+  .service-content p {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+}
+
+
 
 .company {}
 
