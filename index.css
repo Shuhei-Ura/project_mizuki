@@ -73,7 +73,8 @@
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* ===== スマホ ===== */
+/* ===== モバイル対応 ===== */
+
 @media screen and (max-width: 768px) {
     .header-nav {
         display: none;
@@ -221,7 +222,7 @@ body {
 /* =========================
    About Section
 ========================= */
-/*
+
 .about {
   padding: 120px 0;
   background-color: #ffffff;
@@ -259,8 +260,8 @@ body {
 }
 
 /* =========================
-   Mobile
-========================= 
+   Mobile_about
+========================= */
 
 @media screen and (max-width: 768px) {
   .about {
@@ -280,7 +281,6 @@ body {
     line-height: 1.9;
   }
 }
-*/
 
 /* =========================
    SERVICE
@@ -326,7 +326,7 @@ body {
 }
 
 /* =========================
-   販売派遣ブロック
+   テキストブロック
 ========================= */
 
 .service-item {
@@ -358,7 +358,7 @@ body {
 }
 
 /* =========================
-   Mobile
+   Mobile_service
 ========================= */
 
 @media screen and (max-width: 768px) {
@@ -395,12 +395,315 @@ body {
   }
 }
 
+/* =========================
+   Company Section
+========================= */
 
+.company {
+  background-color: #ffffff;
+  padding: 120px 0;
+}
 
-.company {}
+.company-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
 
-.recruit {}
+/* タイトル */
+.company-title {
+  font-size: 48px;
+  font-family: "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: #177cf2;
+  margin-bottom: 16px;
+}
 
-.footer {}
+/* タイトル下の線 */
+.company-line {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: 1px;
+  background-color: #177cf2;
+  margin-bottom: 64px;
+}
+
+/* 会社概要リスト */
+.company-list {
+  margin: 0;
+  padding: 0;
+}
+
+.company-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  padding: 24px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.company-row dt {
+  color: #177cf2;
+  font-weight: 500;
+}
+
+.company-row dd {
+  margin: 0;
+  line-height: 1.8;
+}
+
+/* =========================
+   Mobile_company
+========================= */
+@media screen and (max-width: 768px) {
+  .company {
+    padding: 80px 0;
+  }
+
+  .company-title {
+    font-size: 36px;
+  }
+
+  .company-line {
+    margin-bottom: 40px;
+  }
+
+  .company-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .company-row dt {
+    font-size: 14px;
+  }
+
+  .company-row dd {
+    font-size: 15px;
+  }
+}
+
+/* =========================
+   Recruit Section
+========================= */
+
+.recruit {
+  background-color: #177cf2;
+  padding: 120px 0;
+}
+
+.recruit-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* タイトル */
+.recruit-title {
+  font-size: 48px;
+  font-family: "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* タイトル下の線 */
+.recruit-line {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 0 auto 64px;
+}
+
+/* ボタングループ */
+.recruit-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+/* ボタン共通スタイル */
+.recruit-btn {
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  color: #177cf2;
+  min-width: 180px;
+}
+
+.recruit-btn:hover {
+  opacity: 0.8;
+}
+
+/* アクティブなボタン */
+.recruit-btn.is-active {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* コンテンツエリア */
+.recruit-content {
+  color: #ffffff;
+}
+
+/* 各職種コンテンツ（デフォルトで非表示） */
+.recruit-item {
+  display: none;
+}
+
+/* アクティブなコンテンツ */
+.recruit-item.is-active {
+  display: block;
+}
+
+/* 情報行 */
+.recruit-info-row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  gap: 24px;
+}
+
+.recruit-info-row:first-child {
+  padding-top: 0;
+}
+
+.recruit-label {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.recruit-text {
+  line-height: 1.8;
+  color: #ffffff;
+}
+
+/* =========================
+   Mobile_recruit
+========================= */
+@media screen and (max-width: 768px) {
+  .recruit {
+    padding: 80px 0;
+  }
+
+  .recruit-title {
+    font-size: 36px;
+  }
+
+  .recruit-line {
+    margin-bottom: 40px;
+  }
+
+  .recruit-buttons {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .recruit-btn {
+    width: 100%;
+    min-width: auto;
+    font-size: 15px;
+    padding: 14px 24px;
+  }
+
+  .recruit-info-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 20px 0;
+  }
+
+  .recruit-label {
+    font-size: 14px;
+  }
+
+  .recruit-text {
+    font-size: 15px;
+  }
+}
 
 .contact {}
+
+/* =========================
+   Footer Section
+========================= */
+
+.footer {
+  background-color: #f5f5f5;
+  padding: 60px 0 40px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+/* フッターナビゲーション */
+.footer-nav {
+  margin-bottom: 32px;
+}
+
+.footer-nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-nav-list a {
+  color: #177cf2;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  transition: opacity 0.3s ease;
+}
+
+.footer-nav-list a:hover {
+  opacity: 0.7;
+}
+
+/* コピーライト */
+.footer-copyright {
+  color: #111;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* =========================
+   Mobile_footer
+========================= */
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 40px 0 30px;
+  }
+
+  .footer-nav-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-nav-list a {
+    font-size: 15px;
+  }
+
+  .footer-copyright {
+    font-size: 13px;
+  }
+}
