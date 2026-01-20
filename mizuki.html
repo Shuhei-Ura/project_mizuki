@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="index.css">
     <!-- JS -->
     <script src="js/index.js" defer></script>
+    <script src="mizuki.js" defer></script>
 </head>
 
 <body>
@@ -21,7 +22,37 @@
        Header
   ====================== -->
     <header class="header">
+<<<<<<< HEAD
         <!-- ナビゲーションなど -->
+=======
+        <div class="header-inner">
+            <!-- ロゴ -->
+            <div class="header-logo">
+                <a href="#">
+                    <img src="assets/logo.png" alt="FreeAgent">
+                </a>
+            </div>
+
+            <!-- ナビゲーション -->
+            <nav class="header-nav">
+                <ul class="nav-list">
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#service">SERVICE</a></li>
+                    <li><a href="#company">COMPANY</a></li>
+                    <li><a href="#recruit">RECRUIT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        <!-- ハンバーガーボタン（スマホ用） -->
+        <button class="hamburger" aria-label="メニュー">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+>>>>>>> 7af3bcb412eda19ad56961dbcc7dd0cb939e1d1b
     </header>
 
 
@@ -39,39 +70,235 @@
             </p>
         </div>
     </section>
-    1
 
     <!-- ======================
        About / Service
        （メンバー担当）
   ====================== -->
-    <section class="about">
-        <!-- サービス説明 -->
-    </section>
+
+<section class="about" id="about">
+  <div class="about-inner">
+    <h2 class="about-title">ABOUT</h2>
+    <span class="about-line"></span>
+
+    <div class="about-text">
+      <p>
+        野球業界等で使われるFA（フリーエージェント）は、
+        “自分たちが権利を持って交渉できる”という意味合いで使われます。
+      </p>
+
+      <p>
+        当社を通してスキルやキャリアを育んでいただき、
+        キャリアを築く入口としてほしいという想いを込めて、
+        株式会社フリーエージェントという社名を名付けました。
+      </p>
+
+      <p>
+        販売職、営業職、エンジニア職など多様なキャリアを育める会社であり、
+        スタッフやお客様に貢献できる存在として事業運営しております。
+      </p>
+    </div>
+  </div>
+</section>
+
 
 
     <!-- ======================
        Features
        （メンバー担当）
   ====================== -->
-    <section class="sercive">
-        <!-- 特徴 -->
-    </section>
+<section class="service" id="service">
+  <div class="service-inner">
+
+    <h2 class="service-title">SERVICE</h2>
+    <span class="service-line"></span>
+    <h3 class="service-subtitle">販売派遣</h3>
+
+    <!-- 販売派遣① -->
+    <div class="service-item">
+      <div class="service-image">
+        <img src="assets/service-sales.jpg" alt="販売派遣">
+      </div>
+      <div class="service-content">
+        <p>関東・甲信越・東海を中心に〜</p>
+        <p>「急な欠員」「繁忙期対応」など〜</p>
+      </div>
+    </div>
+
+    <!-- 販売派遣② -->
+    <div class="service-item">
+      <div class="service-image">
+        <img src="assets/service-sales.jpg" alt="販売派遣">
+      </div>
+      <div class="service-content">
+        <p>未経験者から経験豊富なスタッフまで〜</p>
+        <p>教育体制も整えており〜</p>
+      </div>
+    </div>
+
+    <!-- 販売派遣③ -->
+    <div class="service-item">
+      <div class="service-image">
+        <img src="assets/service-sales.jpg" alt="販売派遣">
+      </div>
+      <div class="service-content">
+        <p>短期・長期・スポット対応まで〜</p>
+        <p>現場責任者との連携を重視し〜</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="company" id="company">
+  <div class="company-inner">
+
+    <!-- タイトル -->
+    <h2 class="company-title">COMPANY</h2>
+    <span class="company-line"></span>
+
+    <!-- 会社概要リスト -->
+    <dl class="company-list">
+
+      <div class="company-row">
+        <dt>会社名</dt>
+        <dd>株式会社FreeAgent</dd>
+      </div>
+
+      <div class="company-row">
+        <dt>代表取締役</dt>
+        <dd>石渡 修平</dd>
+      </div>
+
+      <div class="company-row">
+        <dt>設立</dt>
+        <dd>2024年10月25日</dd>
+      </div>
+
+      <div class="company-row">
+        <dt>資本金</dt>
+        <dd>2000万円</dd>
+      </div>
+
+      <div class="company-row">
+        <dt>所在地</dt>
+        <dd>
+          栃木県宇都宮市宝木町2丁目802番地1<br>
+          ヴィラパシフィーリB
+        </dd>
+      </div>
+
+      <div class="company-row">
+        <dt>事業内容</dt>
+        <dd>
+          ・人材派遣事業<br>
+          ・販売・営業アウトソーシング事業
+        </dd>
+      </div>
+
+    </dl>
+
+  </div>
+</section>
+
+
 
 
     <!-- ======================
        Flow / Steps
        （メンバー担当）
   ====================== -->
-    <section class="recruit">
-        <!-- 流れ -->
+    <section class="recruit" id="recruit">
+        <div class="recruit-inner">
+            <!-- タイトル -->
+            <h2 class="recruit-title">RECRUIT</h2>
+            <span class="recruit-line"></span>
+
+            <!-- ボタングループ -->
+            <div class="recruit-buttons">
+                <button class="recruit-btn is-active" data-target="sales">携帯販売スタッフ</button>
+                <button class="recruit-btn" data-target="coordinator">人材コーディネーター</button>
+                <button class="recruit-btn" data-target="engineer">未経験エンジニア</button>
+            </div>
+
+            <!-- コンテンツエリア -->
+            <div class="recruit-content">
+                <!-- 携帯販売スタッフ -->
+                <div class="recruit-item is-active" data-content="sales">
+                    <div class="recruit-info-row">
+                        <div class="recruit-label">職種</div>
+                        <div class="recruit-text">携帯販売スタッフ</div>
+                    </div>
+                    <div class="recruit-info-row">
+                        <div class="recruit-label">仕事内容</div>
+                        <div class="recruit-text">
+                            店舗に来店されたお客様に対して、スマホ・インターネット回線・料金プラン等のご案内や契約手続きを行うお仕事です！<br>
+                            人材を探す企業と、お仕事を探している方をつなぐ"架け橋"のような役割を担うお仕事です。
+                        </div>
+                    </div>
+                    <div class="recruit-info-row">
+                        <div class="recruit-label">応募資格</div>
+                        <div class="recruit-text">高卒以上、スマホの基本操作ができる方</div>
+                    </div>
+                    <div class="recruit-info-row">
+                        <div class="recruit-label">雇用形態</div>
+                        <div class="recruit-text">正社員</div>
+                    </div>
+                </div>
+
+                <!-- 人材コーディネーター -->
+                <div class="recruit-item" data-content="coordinator">
+                    <div class="recruit-info-row">
+                        <div class="recruit-label">職種</div>
+                        <div class="recruit-text">人材コーディネーター</div>
+                    </div>
+                    <div class="recruit-info-row">
+                        <div class="recruit-label">仕事内容</div>
+                        <div class="recruit-text">
+                            企業の「こんな人がほしい！」というニーズをヒアリングし、それに合った弊社の登録スタッフと面談。<br>
+                            人材を探す企業と、お仕事を探している方をつなぐ"架け橋"のような役割を担うお仕事です。
+                        </div>
+                    </div>
+                    <div class="recruit-info-row">
+                        <div class="recruit-label">応募資格</div>
+                        <div class="recruit-text">高卒以上、未経験の方大歓迎</div>
+                    </div>
+                    <div class="recruit-info-row">
+                        <div class="recruit-label">雇用形態</div>
+                        <div class="recruit-text">正社員</div>
+                    </div>
+                </div>
+
+                <!-- 未経験エンジニア -->
+                <div class="recruit-item" data-content="engineer">
+                    <div class="recruit-info-row">
+                        <div class="recruit-label">職種</div>
+                        <div class="recruit-text">未経験エンジニア</div>
+                    </div>
+                    <div class="recruit-info-row">
+                        <div class="recruit-label">仕事内容</div>
+                        <div class="recruit-text">
+                            まずは約6か月のエンジニア研修からスタートし、研修終了後は各クライアント先にホームページ制作やシステム開発などのWebエンジニア業務を行っていただきます。
+                        </div>
+                    </div>
+                    <div class="recruit-info-row">
+                        <div class="recruit-label">応募資格</div>
+                        <div class="recruit-text">高卒以上、未経験の方大歓迎</div>
+                    </div>
+                    <div class="recruit-info-row">
+                        <div class="recruit-label">雇用形態</div>
+                        <div class="recruit-text">正社員</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 
     <!-- ======================
        Contact
   ====================== -->
-    <section class="contact">
+    <section class="contact" id="contact">
         <form action="php/contact.php" method="post">
             <!-- フォーム要素 -->
         </form>
@@ -82,7 +309,20 @@
        Footer
   ====================== -->
     <footer class="footer">
-        <!-- コピーライト等 -->
+        <div class="footer-inner">
+            <!-- フッターナビゲーション -->
+            <nav class="footer-nav">
+                <ul class="footer-nav-list">
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#service">SERVICE</a></li>
+                    <li><a href="#company">COMPANY</a></li>
+                    <li><a href="#recruit">RECRUIT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+            <!-- コピーライト -->
+            <p class="footer-copyright">© 2025 株式会社FA</p>
+        </div>
     </footer>
 
 

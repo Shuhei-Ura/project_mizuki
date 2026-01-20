@@ -1,9 +1,126 @@
-.header {}
+.header {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* ===== 基本（PC） ===== */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.header-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 24px;
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+}
+
+.header-logo {
+    justify-self: start;
+}
+
+.header-logo img {
+    display: block;
+    width: 120px;
+    height: auto;
+    justify-content: center;
+}
+
+.header-nav {
+    justify-self: center;
+}
+
+.nav-list {
+    /*HTMLの<li>部のスタイルを縦から横表示に変える機能*/
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    /* 各メニューの間隔 */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.hamburger span {
+    /*spanの意味後で調べる*/
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #1e4fd7;
+    margin: 6px 0;
+    transition: all 0.3s ease; 
+}
+
+.hamburger.is-open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.is-open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ===== モバイル対応 ===== */
+
+@media screen and (max-width: 768px) {
+    .header-nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;/* ★ 追加 */
+        top: 50%;/* ★ */
+        right: 24px;/* ★ */
+        transform: translateY(-50%);/* ★ 縦中央揃え */
+        z-index: 1000;
+    }
+
+    .header-nav.is-open {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 24px;
+        padding: 24px;
+        text-align: center;
+    }
+}
 
 /* Global Reset for Margin (Optional but recommended for full width) */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
+}
+
+/* セクションのスクロール位置調整（ヘッダー分のオフセット） */
+section {
+    scroll-margin-top: 80px;
 }
 
 .hero {
@@ -26,7 +143,7 @@ body {
     justify-content: center;
     gap: 40px;
     /* Space between logo and text */
-    max-width: 1200px;
+    max-width: 800px;
     width: 100%;
     padding: 0 20px;
 }
@@ -113,12 +230,491 @@ body {
     }
 }
 
-.service {}
+/* =========================
+   About Section
+========================= */
 
-.company {}
+.about {
+  padding: 120px 0;
+  background-color: #ffffff;
+}
 
-.recruit {}
+.about-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
 
-.footer {}
+.about-title {
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: #1e4fd7;
+  margin-bottom: 16px;
+  font-family: "Times New Roman", serif;
+}
+
+.about-line {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: 1px;
+  background-color: #1e4fd7;
+  margin-bottom: 48px;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 2;
+  color: #111;
+  margin-bottom: 24px;
+}
+
+/* =========================
+   Mobile_about
+========================= */
+
+@media screen and (max-width: 768px) {
+  .about {
+    padding: 80px 0;
+  }
+
+  .about-title {
+    font-size: 36px;
+  }
+
+  .about-line {
+    margin-bottom: 32px;
+  }
+
+  .about-text p {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+}
+
+/* =========================
+   SERVICE
+========================= */
+
+.service {
+  background-color: #177cf2;
+  padding: 120px 0;
+}
+
+.service-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* SERVICE タイトル */
+.service-title {
+  font-size: 48px;
+  font-family: "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+/* タイトル直下の細い線（重要） */
+.service-line {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 48px;
+}
+
+/* サブタイトル */
+.service-subtitle {
+  font-size: 22px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+/* =========================
+   テキストブロック
+========================= */
+
+.service-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+/* 画像 */
+.service-image {
+  flex: 0 0 320px;
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* テキスト */
+.service-content {
+  color: #ffffff;
+}
+
+.service-content p {
+  font-size: 16px;
+  line-height: 2;
+  margin-bottom: 16px;
+}
+
+/* =========================
+   Mobile_service
+========================= */
+
+@media screen and (max-width: 768px) {
+  .service {
+    padding: 80px 0;
+  }
+
+  .service-title {
+    font-size: 36px;
+  }
+
+  .service-line {
+    margin-bottom: 32px;
+  }
+
+  .service-subtitle {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .service-item {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .service-image {
+    flex: none;
+    width: 100%;
+  }
+
+  .service-content p {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+}
+
+/* =========================
+   Company Section
+========================= */
+
+.company {
+  background-color: #ffffff;
+  padding: 120px 0;
+}
+
+.company-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* タイトル */
+.company-title {
+  font-size: 48px;
+  font-family: "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: #177cf2;
+  margin-bottom: 16px;
+}
+
+/* タイトル下の線 */
+.company-line {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: 1px;
+  background-color: #177cf2;
+  margin-bottom: 64px;
+}
+
+/* 会社概要リスト */
+.company-list {
+  margin: 0;
+  padding: 0;
+}
+
+.company-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  padding: 24px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.company-row dt {
+  color: #177cf2;
+  font-weight: 500;
+}
+
+.company-row dd {
+  margin: 0;
+  line-height: 1.8;
+}
+
+/* =========================
+   Mobile_company
+========================= */
+@media screen and (max-width: 768px) {
+  .company {
+    padding: 80px 0;
+  }
+
+  .company-title {
+    font-size: 36px;
+  }
+
+  .company-line {
+    margin-bottom: 40px;
+  }
+
+  .company-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .company-row dt {
+    font-size: 14px;
+  }
+
+  .company-row dd {
+    font-size: 15px;
+  }
+}
+
+/* =========================
+   Recruit Section
+========================= */
+
+.recruit {
+  background-color: #177cf2;
+  padding: 120px 0;
+}
+
+.recruit-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* タイトル */
+.recruit-title {
+  font-size: 48px;
+  font-family: "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* タイトル下の線 */
+.recruit-line {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 0 auto 64px;
+}
+
+/* ボタングループ */
+.recruit-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+/* ボタン共通スタイル */
+.recruit-btn {
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  color: #177cf2;
+  min-width: 180px;
+}
+
+.recruit-btn:hover {
+  opacity: 0.8;
+}
+
+/* アクティブなボタン */
+.recruit-btn.is-active {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* コンテンツエリア */
+.recruit-content {
+  color: #ffffff;
+}
+
+/* 各職種コンテンツ（デフォルトで非表示） */
+.recruit-item {
+  display: none;
+}
+
+/* アクティブなコンテンツ */
+.recruit-item.is-active {
+  display: block;
+}
+
+/* 情報行 */
+.recruit-info-row {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  gap: 24px;
+}
+
+.recruit-info-row:first-child {
+  padding-top: 0;
+}
+
+.recruit-label {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.recruit-text {
+  line-height: 1.8;
+  color: #ffffff;
+}
+
+/* =========================
+   Mobile_recruit
+========================= */
+@media screen and (max-width: 768px) {
+  .recruit {
+    padding: 80px 0;
+  }
+
+  .recruit-title {
+    font-size: 36px;
+  }
+
+  .recruit-line {
+    margin-bottom: 40px;
+  }
+
+  .recruit-buttons {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .recruit-btn {
+    width: 100%;
+    min-width: auto;
+    font-size: 15px;
+    padding: 14px 24px;
+  }
+
+  .recruit-info-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 20px 0;
+  }
+
+  .recruit-label {
+    font-size: 14px;
+  }
+
+  .recruit-text {
+    font-size: 15px;
+  }
+}
 
 .contact {}
+
+/* =========================
+   Footer Section
+========================= */
+
+.footer {
+  background-color: #f5f5f5;
+  padding: 60px 0 40px;
+}
+
+.footer-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+/* フッターナビゲーション */
+.footer-nav {
+  margin-bottom: 32px;
+}
+
+.footer-nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-nav-list a {
+  color: #177cf2;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  transition: opacity 0.3s ease;
+}
+
+.footer-nav-list a:hover {
+  opacity: 0.7;
+}
+
+/* コピーライト */
+.footer-copyright {
+  color: #111;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* =========================
+   Mobile_footer
+========================= */
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 40px 0 30px;
+  }
+
+  .footer-nav-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-nav-list a {
+    font-size: 15px;
+  }
+
+  .footer-copyright {
+    font-size: 13px;
+  }
+}
