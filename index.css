@@ -2,7 +2,9 @@
     width: 100%;
     background-color: #ffffff;
     border-bottom: 1px solid #eaeaea;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 /* ===== 基本（PC） ===== */
@@ -15,7 +17,7 @@
 }
 
 .header-inner {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px 24px;
 
@@ -107,9 +109,18 @@
 }
 
 /* Global Reset for Margin (Optional but recommended for full width) */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
+}
+
+/* セクションのスクロール位置調整（ヘッダー分のオフセット） */
+section {
+    scroll-margin-top: 80px;
 }
 
 .hero {
@@ -132,7 +143,7 @@ body {
     justify-content: center;
     gap: 40px;
     /* Space between logo and text */
-    max-width: 1200px;
+    max-width: 800px;
     width: 100%;
     padding: 0 20px;
 }
@@ -229,7 +240,7 @@ body {
 }
 
 .about-inner {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -292,7 +303,7 @@ body {
 }
 
 .service-inner {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -405,7 +416,7 @@ body {
 }
 
 .company-inner {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -493,7 +504,7 @@ body {
 }
 
 .recruit-inner {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -644,7 +655,7 @@ body {
 }
 
 .footer-inner {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 24px;
   text-align: center;

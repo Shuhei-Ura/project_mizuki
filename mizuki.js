@@ -1,3 +1,4 @@
+// ハンバーガーメニューの開閉
 const hamburger = document.querySelector(".hamburger");
 const nav = document.querySelector(".header-nav");
 
@@ -5,7 +6,14 @@ hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("is-open"); // ← 追加
     nav.classList.toggle("is-open");
 });
-
+// ナビゲーションリンククリック時にメニューを閉じる
+const navLinks = document.querySelectorAll(".header-nav a");
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        hamburger.classList.remove("is-open");
+        nav.classList.remove("is-open");
+    });
+});
 // Recruitセクションのボタン切り替え
 const recruitButtons = document.querySelectorAll(".recruit-btn");
 const recruitItems = document.querySelectorAll(".recruit-item");
