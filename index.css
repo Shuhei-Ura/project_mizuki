@@ -1,7 +1,6 @@
 .header {
     width: 100%;
     background-color: #ffffff;
-    border-bottom: 1px solid #177cf2;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -19,7 +18,7 @@
 .header-inner {
     max-width: 800px;
     margin: 0 auto;
-    padding: 30px 24px;
+    padding: 15px 24px;
 
     display: grid;
     align-items: center;
@@ -32,7 +31,7 @@
 
 .header-logo img {
     display: block;
-    width: 120px;
+    width: 100px;
     height: auto;
 }
 
@@ -186,49 +185,9 @@ section {
 .hero-logo img {
     display: block;
     width: 300px;
-    /* Adjust size to be prominent */
     height: auto;
-    /* Blend mode to hide white background of the JPG logo */
-    mix-blend-mode: multiply;
-    /* Optional: Filter to make text white if the logo was black? 
-       No, the logo provided "Lyta" is dark. 
-       The screenshot shows "FA" in white. 
-       If the logo is dark and background is blue, multiply makes it darker. 
-       Wait. "Lyta" logo is dark slate text on white bg (Image 3). 
-       Blue bg + Multiply = Dark Text on Blue. 
-       Screenshot 1 shows WHITE text "FA" on Blue.
-       
-       If I use multiply, the white part of logo becomes transparent (good), but the dark text "Lyta" remains dark (bad vs screenshot feeling?).
-       Measurements: User said "appearance almost exactly mimic photo". 
-       The photo has white logo. 
-       The provided logo is dark. 
-       I should probably invert the logo or make it white if possible with css filters, OR just use it as is if "logo position" is what matters.
-       User says "use image 3 as logo... file name will change later... temporary setting".
-       I'll stick to multiply for now to handle the box, but maybe brightness(0) invert(1) to make it white?
-       Let's try to make it white to match the aesthetic of "FA" in visual.
-    */
-    filter: brightness(0) invert(1);
-    /* Turns black to white */
-    mix-blend-mode: screen;
-    /* Screen blends white onto blue? No. */
-    /* 
-       Strategy:
-       1. The logo is Dark Text on White BG.
-       2. We want White Text on Transparent (Blue) BG.
-       3. Simple invert: White Text on Black BG.
-       4. Screen blend mode: Black becomes transparent, White stays white.
-    */
-}
-
-/* Overriding mix-blend-mode for the filter strategy */
-.hero-logo img {
     mix-blend-mode: screen;
     filter: invert(1) grayscale(1);
-    /* 
-       Original: Dark Grey Text / White BG 
-       Invert: Light Grey Text / Black BG
-       Screen: Black BG becomes transparent. Light Grey Text remains.
-    */
 }
 
 
@@ -301,7 +260,7 @@ section {
   max-width: 700px;
   height: 1px;
   background-color: #177cf2;
-  margin: 0 auto 48px;
+  margin: 0 auto 64px;
 }
 
 .about-text p {
@@ -367,7 +326,7 @@ section {
   max-width: 700px;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.6);
-  margin: 0 auto 48px;
+  margin: 0 auto 64px;
 }
 
 /* サブタイトル */
@@ -486,8 +445,9 @@ section {
 
 /* 会社概要リスト */
 .company-list {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  max-width: 700px;
 }
 
 .company-row {
@@ -607,6 +567,8 @@ section {
 /* コンテンツエリア */
 .recruit-content {
   color: #ffffff;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 /* 各職種コンテンツ（デフォルトで非表示） */
