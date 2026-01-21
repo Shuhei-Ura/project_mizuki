@@ -1,7 +1,7 @@
 .header {
     width: 100%;
     background-color: #ffffff;
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 1px solid #177cf2;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -19,7 +19,7 @@
 .header-inner {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px 24px;
+    padding: 30px 24px;
 
     display: grid;
     align-items: center;
@@ -34,7 +34,6 @@
     display: block;
     width: 120px;
     height: auto;
-    justify-content: center;
 }
 
 .header-nav {
@@ -42,25 +41,39 @@
 }
 
 .nav-list {
-    /*HTMLの<li>部のスタイルを縦から横表示に変える機能*/
     display: flex;
     align-items: center;
-    gap: 32px;
-    /* 各メニューの間隔 */
+    gap: 0;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
+.nav-list li {
+    padding: 0 32px;
+}
+
+.nav-list a {
+    color: #177cf2;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #000000;
+}
+
 
 .hamburger span {
-    /*spanの意味後で調べる*/
     display: block;
     width: 24px;
     height: 2px;
     background-color: #1e4fd7;
     margin: 6px 0;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
 }
 
 .hamburger.is-open span:nth-child(1) {
@@ -84,10 +97,10 @@
 
     .hamburger {
         display: block;
-        position: absolute;/* ★ 追加 */
-        top: 50%;/* ★ */
-        right: 24px;/* ★ */
-        transform: translateY(-50%);/* ★ 縦中央揃え */
+        position: absolute;
+        top: 50%;
+        right: 24px;
+        transform: translateY(-50%);
         z-index: 1000;
     }
 
@@ -98,13 +111,35 @@
         left: 0;
         width: 100%;
         background-color: #ffffff;
+        overflow-y: auto;
+        z-index: 999;
     }
 
     .nav-list {
         flex-direction: column;
-        gap: 24px;
-        padding: 24px;
+        gap: 0;
+        padding: 0 24px 24px 24px;
         text-align: center;
+    }
+
+    .nav-list li {
+        padding: 0;
+        width: 100%;
+        border-bottom: 1px solid #177cf2;
+    }
+
+    .nav-list li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-list li a {
+        display: block;
+        padding: 16px 0;
+        transition: color 0.3s ease;
+    }
+
+    .nav-list li a:hover {
+        color: #000000;
     }
 }
 
@@ -214,19 +249,24 @@ section {
     }
 
     .hero-container {
-        flex-direction: column;
-        /* Stack logo and text if space is tight */
-        gap: 15px;
-        text-align: center;
+        flex-direction: row;
+        gap: 20px;
+        text-align: left;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hero-logo {
+        flex: 0 0 auto;
     }
 
     .hero-logo img {
-        width: 180px;
-        /* Smaller logo on mobile */
+        width: 200px;
     }
 
     .hero-text {
-        font-size: 1.2rem;
+        flex: 1;
+        font-size: 1.8rem;
     }
 }
 
@@ -235,7 +275,7 @@ section {
 ========================= */
 
 .about {
-  padding: 120px 0;
+  padding: 40px;
   background-color: #ffffff;
 }
 
@@ -252,15 +292,16 @@ section {
   color: #1e4fd7;
   margin-bottom: 16px;
   font-family: "Times New Roman", serif;
+  text-align: center;
 }
 
 .about-line {
   display: block;
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   height: 1px;
-  background-color: #1e4fd7;
-  margin-bottom: 48px;
+  background-color: #177cf2;
+  margin: 0 auto 48px;
 }
 
 .about-text p {
@@ -276,7 +317,7 @@ section {
 
 @media screen and (max-width: 768px) {
   .about {
-    padding: 80px 0;
+    padding: 20px;
   }
 
   .about-title {
@@ -299,7 +340,7 @@ section {
 
 .service {
   background-color: #177cf2;
-  padding: 120px 0;
+  padding: 40px;
 }
 
 .service-inner {
@@ -316,6 +357,7 @@ section {
   letter-spacing: 0.2em;
   color: #ffffff;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 /* タイトル直下の細い線（重要） */
@@ -325,7 +367,7 @@ section {
   max-width: 700px;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 48px;
+  margin: 0 auto 48px;
 }
 
 /* サブタイトル */
@@ -374,7 +416,7 @@ section {
 
 @media screen and (max-width: 768px) {
   .service {
-    padding: 80px 0;
+    padding: 20px;
   }
 
   .service-title {
@@ -412,7 +454,7 @@ section {
 
 .company {
   background-color: #ffffff;
-  padding: 120px 0;
+  padding: 40px;
 }
 
 .company-inner {
@@ -429,6 +471,7 @@ section {
   letter-spacing: 0.2em;
   color: #177cf2;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 /* タイトル下の線 */
@@ -438,7 +481,7 @@ section {
   max-width: 700px;
   height: 1px;
   background-color: #177cf2;
-  margin-bottom: 64px;
+  margin: 0 auto 64px;
 }
 
 /* 会社概要リスト */
@@ -451,7 +494,7 @@ section {
   display: grid;
   grid-template-columns: 200px 1fr;
   padding: 24px 0;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid rgba(23, 124, 242, 0.2);
 }
 
 .company-row dt {
@@ -469,7 +512,7 @@ section {
 ========================= */
 @media screen and (max-width: 768px) {
   .company {
-    padding: 80px 0;
+    padding: 20px;
   }
 
   .company-title {
@@ -500,7 +543,7 @@ section {
 
 .recruit {
   background-color: #177cf2;
-  padding: 120px 0;
+  padding: 40px;
 }
 
 .recruit-inner {
@@ -604,7 +647,7 @@ section {
 ========================= */
 @media screen and (max-width: 768px) {
   .recruit {
-    padding: 80px 0;
+    padding: 20px;
   }
 
   .recruit-title {
@@ -702,7 +745,7 @@ section {
 ========================= */
 @media screen and (max-width: 768px) {
   .footer {
-    padding: 40px 0 30px;
+    padding: 20px 0 20px;
   }
 
   .footer-nav-list {
