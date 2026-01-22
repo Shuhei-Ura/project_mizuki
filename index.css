@@ -1,8 +1,7 @@
 .header {
     width: 100%;
     background-color: #ffffff;
-    position: sticky;
-    top: 0;
+    position: relative;
     z-index: 1000;
 }
 
@@ -90,6 +89,11 @@
 /* ===== モバイル対応 ===== */
 
 @media screen and (max-width: 768px) {
+    .header {
+        position: sticky;
+        top: 0;
+    }
+
     .header-nav {
         display: none;
     }
@@ -159,6 +163,17 @@ section {
     scroll-margin-top: 80px;
 }
 
+/* スマホ専用改行 */
+.sp-only {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .sp-only {
+        display: inline;
+    }
+}
+
 .hero {
     width: 100%;
     /* PC height default */
@@ -208,10 +223,11 @@ section {
 
     .hero-container {
         flex-direction: row;
-        gap: 20px;
+        gap: 16px;
         text-align: left;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
+        padding: 0 20px;
     }
 
     .hero-logo {
@@ -219,12 +235,14 @@ section {
     }
 
     .hero-logo img {
-        width: 200px;
+        width: 140px;
     }
 
     .hero-text {
         flex: 1;
-        font-size: 1.8rem;
+        font-size: 1.05rem;
+        margin-top: 0;
+        line-height: 1.5;
     }
 }
 
@@ -277,6 +295,32 @@ section {
   margin-top: 40px;
 }
 
+.founder-content {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  margin: 24px 0;
+}
+
+.founder-photo {
+  flex-shrink: 0;
+}
+
+.founder-photo img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border: 2px solid #bbbeaf;
+}
+
+.founder-text {
+  flex: 1;
+}
+
+.founder-text p {
+  margin: 0;
+}
+
 /* =========================
    Mobile_about
 ========================= */
@@ -318,7 +362,7 @@ section {
 .service-inner {
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 16px;
 }
 
 /* SERVICE タイトル */
@@ -377,7 +421,7 @@ section {
 }
 
 .service-content p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 2;
   margin-bottom: 16px;
 }
@@ -415,7 +459,7 @@ section {
   }
 
   .service-content p {
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.9;
   }
 }
@@ -432,7 +476,7 @@ section {
 .company-inner {
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 16px;
 }
 
 /* タイトル */
@@ -477,7 +521,7 @@ section {
 
 .company-row dd {
   margin: 0;
-  line-height: 1.8;
+  line-height: 2;
   color: #003030e8;
 }
 
@@ -608,9 +652,13 @@ section {
   padding-top: 0;
 }
 
+.recruit-info-row:last-child {
+  border-bottom: none;
+}
+
 .recruit-label {
-  font-weight: 700;
-  font-size: 22px;
+  font-weight: 500;
+  font-size: 18px;
   color: #54a49e;
 }
 
