@@ -17,7 +17,7 @@
 .header-inner {
     max-width: 800px;
     margin: 0 auto;
-    padding: 0% 24px;
+    padding: 0 24px;
 
     display: grid;
     align-items: center;
@@ -156,6 +156,8 @@ html {
 body {
     margin: 0;
     padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+    color: #333;
 }
 
 /* セクションのスクロール位置調整（ヘッダー分のオフセット） */
@@ -295,32 +297,6 @@ section {
   margin-top: 40px;
 }
 
-.founder-content {
-  display: flex;
-  gap: 24px;
-  align-items: flex-start;
-  margin: 24px 0;
-}
-
-.founder-photo {
-  flex-shrink: 0;
-}
-
-.founder-photo img {
-  width: 150px;
-  height: 200px;
-  object-fit: cover;
-  border: 2px solid #bbbeaf;
-}
-
-.founder-text {
-  flex: 1;
-}
-
-.founder-text p {
-  margin: 0;
-}
-
 /* =========================
    Mobile_about
 ========================= */
@@ -355,7 +331,7 @@ section {
 ========================= */
 
 .service {
-  background: linear-gradient(135deg, #e8ead9 0%, #8a8d7a 100%);
+  background: linear-gradient(135deg, #f4f5ea 0%, #c5c7b5 100%);
   padding: 40px;
 }
 
@@ -560,7 +536,7 @@ section {
 ========================= */
 
 .recruit {
-  background: linear-gradient(135deg, #e8ead9 0%, #8a8d7a 100%);
+  background: linear-gradient(135deg, #f4f5ea 0%, #c5c7b5 100%);
   padding: 40px;
 }
 
@@ -710,8 +686,6 @@ section {
     font-size: 15px;
   }
 }
-
-.contact {}
 
 /* =========================
    Footer Section
