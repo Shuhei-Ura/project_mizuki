@@ -128,7 +128,7 @@
       <!-- 見出し① -->
       <div class="service-item">
         <div class="service-image">
-          <img src="assets/service-sales.jpg" alt="販売派遣" loading="lazy">
+          <img src="assets/営業.jpg" alt="営業" loading="lazy">
         </div>
         <div class="service-content">
           <p>対店舗に向けた獲得支援事業</p>
@@ -141,7 +141,7 @@
       <!-- 販売派遣② -->
       <div class="service-item">
         <div class="service-image">
-          <img src="assets/service-sales.jpg" alt="販売派遣" loading="lazy">
+          <img src="assets/イベントスタッフ1.jpg" alt="イベント" loading="lazy">
         </div>
         <div class="service-content">
           <p>イベントの人員手配、企画、<br class="sp-only">場所の調整など、</p>
@@ -154,7 +154,7 @@
       <!-- 販売派遣③ -->
       <div class="service-item">
         <div class="service-image">
-          <img src="assets/service-sales.jpg" alt="販売派遣" loading="lazy">
+          <img src="assets/コンサル1.jpg" alt="consulting" loading="lazy">
         </div>
         <div class="service-content">
           <p>クライアントの課題解決を支援し、</p>
@@ -316,9 +316,67 @@
        Contact
   ====================== -->
   <section class="contact" id="contact">
-    <form action="php/contact.php" method="post">
-      <!-- フォーム要素 -->
-    </form>
+    <div class="contact-inner">
+      <!-- タイトル -->
+      <h2 class="contact-title">CONTACT</h2>
+      <span class="contact-line"></span>
+
+      <!-- フォーム -->
+      <form action="php/contact.php" method="post" class="contact-form">
+        
+        <!-- 会社名・団体名 -->
+        <div class="form-group">
+          <label for="company" class="form-label">会社名・団体名</label>
+          <input 
+            type="text" 
+            id="company" 
+            name="company" 
+            class="form-input" 
+            placeholder="株式会社Lyta">
+        </div>
+
+        <!-- お名前 -->
+        <div class="form-group">
+          <label for="name" class="form-label">お名前<span class="required">*</span></label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            class="form-input" 
+            placeholder="ライタ太郎" 
+            required>
+        </div>
+
+        <!-- メールアドレス -->
+        <div class="form-group">
+          <label for="email" class="form-label">メールアドレス<span class="required">*</span></label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            class="form-input" 
+            placeholder="info@Lyta.co.jp" 
+            required>
+        </div>
+
+        <!-- お問合わせ内容 -->
+        <div class="form-group">
+          <label for="message" class="form-label">お問合わせ内容<span class="required">*</span></label>
+          <textarea 
+            id="message" 
+            name="message" 
+            class="form-textarea" 
+            rows="8" 
+            required></textarea>
+        </div>
+
+        <!-- 送信ボタン -->
+        <div class="form-submit">
+          <button type="submit" class="submit-btn">送信する</button>
+        </div>
+
+      </form>
+    </div>
   </section>
 
 

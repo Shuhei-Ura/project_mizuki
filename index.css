@@ -760,3 +760,145 @@ section {
     font-size: 13px;
   }
 }
+
+/* =========================
+   Contact Section
+========================= */
+
+.contact {
+  background-color: #ffffff;
+  padding: 40px;
+}
+
+.contact-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* タイトル */
+.contact-title {
+  font-size: 48px;
+  font-family: "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: #54a49e;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* タイトル下の線 */
+.contact-line {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: 1px;
+  background-color: #bbbeaf;
+  margin: 0 auto 64px;
+}
+
+/* フォーム */
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 32px;
+}
+
+.form-label {
+  display: block;
+  color: #54a49e;
+  font-weight: 500;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.required {
+  color: #54a49e;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #bbbeaf;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #003030e8;
+  background-color: #ffffff;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #bbbeaf;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #54a49e;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* 送信ボタン */
+.form-submit {
+  text-align: center;
+  margin-top: 48px;
+}
+
+.submit-btn {
+  background-color: #54a49e;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 16px 64px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  letter-spacing: 0.1em;
+}
+
+.submit-btn:hover {
+  opacity: 0.8;
+}
+
+/* =========================
+   Mobile_contact
+========================= */
+@media screen and (max-width: 768px) {
+  .contact {
+    padding: 20px;
+  }
+
+  .contact-title {
+    font-size: 36px;
+  }
+
+  .contact-line {
+    margin-bottom: 40px;
+  }
+
+  .form-label {
+    font-size: 15px;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .submit-btn {
+    font-size: 16px;
+    padding: 14px 48px;
+  }
+}
