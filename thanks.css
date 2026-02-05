@@ -1,0 +1,67 @@
+/* Thanks Page Specific Styles */
+
+.thanks-main {
+    padding: 120px 24px 80px;
+    /* Header spacing + padding */
+    text-align: center;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fcfcf9;
+    /* Light background similar to other sections */
+}
+
+.thanks-title {
+    font-family: "Times New Roman", serif;
+    font-size: 32px;
+    color: #54a49e;
+    /* Teal theme color */
+    margin-bottom: 24px;
+    letter-spacing: 0.1em;
+}
+
+.thanks-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #003030e8;
+    margin-bottom: 40px;
+}
+
+.thanks-btn {
+    display: inline-block;
+    padding: 16px 48px;
+    background-color: #54a49e;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 4px;
+    /* Slight rounded corners */
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.thanks-btn:hover {
+    background-color: #438782;
+    opacity: 1;
+    /* Override default link hover opacity if needed */
+}
+
+@media screen and (max-width: 768px) {
+    .thanks-main {
+        padding: 100px 20px 60px;
+    }
+
+    .thanks-title {
+        font-size: 24px;
+    }
+
+    .thanks-text {
+        font-size: 15px;
+    }
+
+    .thanks-btn {
+        padding: 14px 40px;
+        font-size: 14px;
+    }
+}

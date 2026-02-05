@@ -7,8 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Lyta</title>
-  <meta name="description"
-    content="株式会社Lytaは、営業代行・イベント請負・コンサルティングを通じて企業の課題解決を支援し、
+  <meta name="description" content="株式会社Lytaは、営業代行・イベント請負・コンサルティングを通じて企業の課題解決を支援し、
     関わるすべての人が笑顔になれる環境づくりを大切にしています。各サービスの特徴や取り組みについて詳しくご紹介します。">
 
   <meta name="keywords" content="Lyta,株式会社Lyta,営業代行,イベント請負,コンサルティング,
@@ -17,8 +16,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="index.css">
   <!-- JS -->
-  <script src="js/index.js" defer></script>
-  <script src="mizuki.js" defer></script>
+  <script src="index.js" defer></script>
 </head>
 
 <body>
@@ -85,7 +83,7 @@
 
       <div class="about-text">
         <p>
-          　私たち株式会社Lytaは、「関わるすべての人が笑顔になれる環境を作る」
+          私たち株式会社Lytaは、「関わるすべての人が笑顔になれる環境を作る」
           ことを企業の使命として掲げています。お客様、従業員、そして社会全体
           にポジティブな影響を与え、笑顔を生み出すことが私たちの原動力です。
           私たちの仕事は単なる業務を超え、関わるすべての人々に喜びをもたらす
@@ -93,14 +91,14 @@
         </p>
 
         <p>
-          　そのために、私たちの価値観は「利他的精神」に基づいています。相手の
+          そのために、私たちの価値観は「利他的精神」に基づいています。相手の
           ことを本気で思いやり、助け合うことが結果として自分たちにも良い影響
           を与えると信じています。この利他の精神が根底にあるからこそ、お客様
           に喜んでもらい、社員にも成長と成功をもたらすのです。
         </p>
 
         <p>
-          　私たちは、これからも「笑顔」を生む活動を積極的に行い、社会の中でよ
+          私たちは、これからも「笑顔」を生む活動を積極的に行い、社会の中でよ
           り良い影響を与えていきます。そして、未来に向けては、従業員一人ひと
           りが社会的なリーダーとして活躍できる場を提供し、その上で全員が長く
           働き続けられる魅力的な企業づくりを目指していきます。お客様とともに
@@ -163,6 +161,19 @@
         </div>
       </div>
 
+      <h3 class="service-subtitle">SES営業</h3>
+
+      <!-- 販売派遣③ -->
+      <div class="service-item">
+        <div class="service-image">
+          <img src="assets/hero3.png" alt="consulting" loading="lazy">
+        </div>
+        <div class="service-content">
+          <p>エンジニア不足や開発リソース不足で困っている企業様に経験豊富なエンジニアや、
+            未経験を独自のカリキュラムで教育したエンジニアの派遣</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -209,7 +220,8 @@
           <dd>
             ・マーケティング支援事業<br>
             ・イベント事業<br>
-            ・コンサルティング事業
+            ・コンサルティング事業<br>
+            ・SES営業(エンジニア育成、派遣)
           </dd>
         </div>
 
@@ -233,9 +245,9 @@
 
       <!-- ボタングループ -->
       <div class="recruit-buttons">
-        <button class="recruit-btn is-active" data-target="sales">営業</button>
-        <button class="recruit-btn" data-target="coordinator">イベント</button>
-        <button class="recruit-btn" data-target="engineer">コンサル</button>
+        <button class="recruit-btn is-active" data-target="sales">携帯販売</button>
+        <button class="recruit-btn" data-target="coordinator">人材<br>スタッフ</button>
+        <button class="recruit-btn" data-target="engineer">エンジニア</button>
       </div>
 
       <!-- コンテンツエリア -->
@@ -323,64 +335,29 @@
 
       <!-- フォーム -->
       <form action="php/contact.php" method="post" class="contact-form">
-        
+
         <!-- 会社名・団体名 -->
         <div class="form-group">
           <label for="company" class="form-label">会社名・団体名</label>
-          <input 
-            type="text" 
-            id="company" 
-            name="company" 
-            class="form-input" 
-            placeholder="株式会社Lyta">
+          <input type="text" id="company" name="company" class="form-input" placeholder="株式会社Lyta">
         </div>
 
         <!-- お名前 -->
         <div class="form-group">
           <label for="name" class="form-label">お名前<span class="required">*</span></label>
-          <input 
-            type="text" 
-            id="name" 
-            name="name" 
-            class="form-input" 
-            placeholder="ライタ太郎" 
-            required>
+          <input type="text" id="name" name="name" class="form-input" placeholder="ライタ太郎" required>
         </div>
 
         <!-- メールアドレス -->
         <div class="form-group">
           <label for="email" class="form-label">メールアドレス<span class="required">*</span></label>
-          <input 
-            type="email" 
-            id="email" 
-            name="email" 
-            class="form-input" 
-            placeholder="info@Lyta.co.jp" 
-            required>
+          <input type="email" id="email" name="email" class="form-input" placeholder="info@Lyta.co.jp" required>
         </div>
 
         <!-- お問合わせ内容 -->
         <div class="form-group">
           <label for="message" class="form-label">お問合わせ内容<span class="required">*</span></label>
-          <textarea 
-            id="message" 
-            name="message" 
-            class="form-textarea" 
-            rows="8" 
-            required></textarea>
-        </div>
-
-        <!-- プライバシーポリシー同意 -->
-        <div class="form-checkbox">
-          <label class="checkbox-label">
-            <input 
-              type="checkbox" 
-              id="privacy" 
-              name="privacy" 
-              class="checkbox-input" 
-              required>
-            <span class="checkbox-text">プライバシーポリシーに同意</span>
-          </label>
+          <textarea id="message" name="message" class="form-textarea" rows="8" required></textarea>
         </div>
 
         <!-- 送信ボタン -->
